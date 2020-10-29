@@ -1,0 +1,33 @@
+{% extends 'public/layout.html' %}
+{% load static %}
+{% block content %}
+
+      <div id="particles-js"></div>
+      <div class="container" >
+         <div class="col-lg-12 main-col-12">
+            <div class="col-lg-12">
+               <a href="/admin">
+                  <h5 class="text-right"><i class="fa fa-user-circle" aria-hidden="true"></i> Nguyễn Văn Lâm</h5>
+               </a>
+               <h1 class="text-center section-title">Nhận diện biển số xe + nhân diện khuôn mặt<br>Nghiên cứu khoa học sinh viên Khoa Công Nghệ Thông Tin </h1>
+            </div>
+            <div class="row">
+               <div class="col-md-5" style="border-right: 2px solid;">
+                  <div class="col-md-6"></div>
+                  <!-- <h3 class="text-center">Using Eigenfaces with SVM</h3> -->
+                  <div class="col-md-6">
+                     <a href="{% url 'Core:chonbienso' %}"> <img src="{% static 'public/img/photo.png' %}" class="img-responsive"/></a>
+                     <h4 class="text-center">Chọn biển số</h4>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="col-md-4">
+                     <a href="{% url 'Core:detect_webbycamera' %}"><img src="{% static 'public/img/webcam.png' %}" class="img-responsive" /></a>
+                     <h4 class="text-center">Nhận diện biển số xe</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+{% endblock %}
+

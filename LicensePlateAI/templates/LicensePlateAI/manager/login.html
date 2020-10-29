@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'public/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'public/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'public/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'public/vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'public/vendor/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'public/vendor/animsition/css/animsition.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'public/vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'public/vendor/daterangepicker/daterangepicker.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'public/css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'public/css/register.css' %}">
+    <!--===============================================================================================-->
+</head>
+<body>
+    <div class="wrapper" style="margin: 220px auto">
+        <form action="{% url 'Core:login' %}" method="post">
+            {% csrf_token %}
+            <div class="title">
+                Login
+            </div>
+            <div class="form">
+                <div class="inputfield">
+                    {% for mess in messages %}
+                        {{ mess }}
+                    {% endfor %}
+                </div>
+                <div class="inputfield">
+                    <label>Email</label>
+                    <input type="text" id="email" name="user" class="input">
+                </div>
+                <div class="inputfield">
+                    <label>Password</label>
+                    <input type="password" id="pass" name="pass" class="input">
+                </div>
+                <div class="inputfield">
+                    <input type="submit" value="Login" class="btn" style="margin: 16px 0">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script src="{% static 'public/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'public/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'public/vendor/bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'public/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'public/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'public/vendor/daterangepicker/moment.min.js' %}"></script>
+<script src="{% static 'public/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'public/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+<script src="{% static 'public/js/login.js' %}"></script>
+
+</body>
+</html>

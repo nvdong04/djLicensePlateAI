@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'public/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'public/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'public/css/font-awesome.min.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'public/js/jquery.fancybox.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'public/css/toastr.css' %}" />
+        <!-- Bootstrap core JavaScript -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    {% include 'blog/blocks/header.html' %}
+
+    {% block content %} {% endblock %}
+
+	<!-- +++++ Footer Section +++++ -->
+    {% include 'blog/blocks/footer.html' %}
+
+    {% block load_js %}
+    {% endblock %}
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="{% static 'public/js/jquery.min.js' %}"></script>
+    <script src="{% static 'public/js/webcam.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'public/js/jquery.fancybox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'public/js/fancybox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'public/js/tienganh.js' %}"></script>
+    <script type="text/javascript" src="{% static 'public/js/toastr.js' %}"></script>
+  </body>
+</html>
